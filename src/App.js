@@ -1,18 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Topbar from "./Topbar";
+import Sidebar from "./Sidebar";
+import Overview from "./Overview";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="App-header">
+          <Topbar />
+        </div>
+        <div className="App-nav">
+          <Sidebar />
+        </div>
+        <div className="App-content">
+          <Overview />
+        </div>
       </div>
     );
   }
