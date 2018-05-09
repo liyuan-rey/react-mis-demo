@@ -1,0 +1,26 @@
+.nav-box {
+  width: 180px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.nav-box .toggle {
+  height: 32px;
+  width: 100%;
+  color: #aeb9c2;
+  background-color: #4a5064;
+  text-align: center;
+  line-height: 32px !important;
+}
+
+.nav-box .nav-item {
+  height: 42px;
+  color: #fff;
+  background-color: #42485b;
+  text-align: center;
+  line-height: 42px;
+}
+
+.nav-box a {
+  color: #fff;
+}
