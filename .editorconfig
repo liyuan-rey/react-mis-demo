@@ -1,0 +1,33 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+indent_size = 2
+
+# Matches specified file
+[README.md]
+indent_size = 2
+
+# Matches the exact files either jsconfig.json or tsconfig.json
+[{jsconfig.json,tsconfig.json}]
+indent_size = 4
+
+# Matches multiple files with same expansion notation
+[*.svg]
+indent_size = 4
+
+# Matches multiple files with brace expansion notation
+# Set default charset
+[*.{js,ts}]
+indent_size = 2
+
+# Indentation override for all json under .vscode directory
+[.vscode/**.json]
+indent_size = 4
