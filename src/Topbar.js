@@ -15,13 +15,13 @@ class Topbar extends Component {
   render() {
     return (
       <div>
-        <div class="logo pull-left">
+        <div className="logo pull-left">
           <img src={logo} width="50px" height="50px" alt="logo" />
         </div>
-        <div class="title pull-left">React MIS Demo</div>
-        <div class="info pull-right">
-          <div class="notice pull-left">{this.state.noticeCount}</div>
-          <div class="user pull-left">{this.state.username}</div>
+        <div className="title pull-left">React MIS Demo</div>
+        <div className="info pull-right">
+          <div className="notice pull-left">{this.state.noticeCount}</div>
+          <div className="user pull-left">{this.state.username}</div>
         </div>
       </div>
     );
