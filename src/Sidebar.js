@@ -45,18 +45,50 @@ function NavPage(props) {
   );
 }
 
-function NavItemList(props) {
-  let items = props.items;
-  let listStyle = { maxHeight: (props.active ? items.length * 40 : 0) + "px" };
-  return (
-    <ul className="sidebar-trans" style={listStyle}>
-      {items.map(item => (
-        <li key={item.key}>
-          <a href={item.uri}>{item.label}</a>
-        </li>
-      ))}
-    </ul>
-  );
+class NavItemList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentItemId: ""
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e, id) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    this.setState({
+      currentItemId: id
+    });
+  }
+
+  render() {
+    let items = this.props.items;
+    let listStyle = {
+      maxHeight: (this.props.active ? items.length * 40 : 0) + "px"
+    };
+
+    return (
+      <ul className="sidebar-trans" style={listStyle}>
+        {items.map(item => (
+          <li
+            key={item.key}
+            className={
+              this.props.active && this.state.currentItemId === item.key
+                ? "active"
+                : ""
+            }
+          >
+            <a href={item.uri} onClick={e => this.handleClick(e, item.key)}>
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    );
+  }
 }
 
 class Sidebar extends Component {

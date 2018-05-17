@@ -33,6 +33,9 @@
   cursor: pointer;
   overflow: hidden;
 }
+.sidebar .nav-page .nav-page-title:hover {
+  background: #00c1de;
+}
 
 .sidebar .nav-page ul {
   width: 200px;
@@ -56,4 +59,8 @@
 
 .sidebar .nav-page li a:hover {
   background-color: #4a5064;
+}
+
+.sidebar .nav-page li.active a {
+  background: #00c1de;
 }

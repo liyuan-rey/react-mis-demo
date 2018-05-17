@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import "./App.css";
 import Topbar from "./Topbar";
 import Sidebar from "./Sidebar";
-import Overview from "./Overview";
+// import Overview from "./Overview";
+import Incident from "./Incident";
 
 class App extends Component {
   render() {
@@ -15,7 +16,7 @@ class App extends Component {
           <Sidebar />
         </div>
         <div className="App-content">
-          <Overview />
+          <Incident />
         </div>
       </div>
     );
