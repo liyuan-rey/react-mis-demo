@@ -152,6 +152,10 @@
       overflow: hidden;
     }
 
+    .sidebar .nav-page .nav-page-title:hover {
+      background: #00c1de;
+    }
+
     .sidebar .nav-page ul {
       width: 200px;
       margin: 0;
@@ -174,6 +178,10 @@
 
     .sidebar .nav-page li a:hover {
       background-color: #4a5064;
+    }
+
+    .sidebar .nav-page li.active a {
+      background: #00c1de;
     }
 
     .inc-mag {
@@ -331,7 +339,7 @@
             <span>警情管理</span>
           </div>
           <ul class="sidebar-trans" style="max-height: 80px">
-            <li>
+            <li class="active">
               <a href="">当前警情</a>
             </li>
             <li>
@@ -343,9 +351,15 @@
           <div class="nav-page-title sidebar-trans">
             <span>资源管理</span>
           </div>
-          <ul class="sidebar-trans" style="max-height: 0px">
+          <ul class="sidebar-trans" style="max-height: 120px">
             <li>
-              <a href="">资源清单</a>
+              <a href="">资源人</a>
+            </li>
+            <li>
+              <a href="">资源车</a>
+            </li>
+            <li>
+              <a href="">资源物资</a>
             </li>
           </ul>
         </div>
